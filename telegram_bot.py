@@ -1,6 +1,6 @@
 import logging
 from telegram import Update
-from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, filters  # 'filters' instead of 'Filters'
 import requests
 
 # Setup logging
@@ -8,15 +8,15 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Your bot's API token
-TOKEN = '6927052523:AAEQOBNb9GQ-ymbcp0iVyobgDsv1CqUUdjE'
+TOKEN = 'YOUR_BOT_TOKEN'
 
 # Your main channel chat_id
-MAIN_CHANNEL_CHAT_ID = '-1002075070793'
+MAIN_CHANNEL_CHAT_ID = 'YOUR_MAIN_CHANNEL_CHAT_ID'
 
 # Dictionary of target channels and their corresponding chat_ids
 TARGET_CHANNELS = {
-    'Channel 1': '-1002041790711',
-    'Channel 2': '-1002133702625'
+    'Channel 1': 'CHANNEL_1_CHAT_ID',
+    'Channel 2': 'CHANNEL_2_CHAT_ID'
 }
 
 # Function to start the bot
