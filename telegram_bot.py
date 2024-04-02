@@ -1,6 +1,6 @@
 import logging
 from telegram import Update
-from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, filters  # 'filters' instead of 'Filters'
+from telegram.ext import Updater, CommandHandler, CallbackContext, MessageHandler, filters
 import requests
 
 # Setup logging
@@ -51,7 +51,7 @@ def error(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token
-    updater = Updater(TOKEN)
+    updater = Updater(TOKEN, use_context=True)  # use_context=True for newer versions of python-telegram-bot
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
